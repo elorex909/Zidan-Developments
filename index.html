@@ -450,6 +450,18 @@
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
+        .intro-name-ar {
+            margin-top: 18px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-align: center;
+            opacity: 0.97;
+            text-shadow: 0 0 18px rgba(255, 255, 255, 0.35);
+        }
+
         /* ═══════════════════════════════════════════════════
            SLIDE 2: FOUNDER (م. رفعت زيدان)
            ═══════════════════════════════════════════════════ */
@@ -870,9 +882,59 @@
             transform: scale(1.02);
         }
 
+/* ═══════════════════════════════════════════════════
+   GALLERY SLIDES (صور إضافية)
+   ═══════════════════════════════════════════════════ */
+.s-gallery {
+    background: radial-gradient(circle at center, #151922 0%, #06070a 65%, #000000 100%);
+}
+.gallery-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+.gallery-frame {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    width: min(1150px, 88vw);
+    height: min(680px, 74vh);
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+.gallery-frame:hover {
+    border-color: transparent;
+    box-shadow: none;
+}
+.gallery-frame img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+.gallery-frame:hover img {
+    transform: scale(1.02);
+}
+
         /* ═══════════════════════════════════════════════════
            SLIDE 10: COMMERCIAL MALLS (NAMES ONLY)
-           Invest Mall بالتجمع & مول في الأندلس
            ═══════════════════════════════════════════════════ */
         .s-malls {
             background: radial-gradient(circle at center, #151922 0%, #06070a 65%, #000000 100%);
@@ -1041,7 +1103,88 @@
         }
 
         /* ═══════════════════════════════════════════════════
-           SLIDE 12: END & INTERACTIVE SOCIAL/PHONE LINKS
+           SLIDE 12: WHY ZIDAN (لماذا تختار زيدان)
+           ═══════════════════════════════════════════════════ */
+        .s-why {
+            background: radial-gradient(circle at center, #151922 0%, #06070a 65%, #000000 100%);
+        }
+        .why-wrap {
+            max-width: 1250px;
+            width: 100%;
+            text-align: center;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            margin-top: 44px;
+        }
+        .why-card {
+            background: linear-gradient(145deg, rgba(26, 30, 42, 0.78) 0%, rgba(12, 14, 20, 0.85) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: var(--radius-xl);
+            padding: 38px 24px 32px;
+            text-align: center;
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(16px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .why-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.45);
+            background: linear-gradient(145deg, rgba(40, 46, 62, 0.92) 0%, rgba(18, 22, 30, 0.94) 100%);
+            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(255, 255, 255, 0.08);
+        }
+        .why-card:hover::before {
+            opacity: 1;
+        }
+        .why-icon-box {
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: transform 0.4s ease;
+        }
+        .why-card:hover .why-icon-box {
+            transform: scale(1.1) rotate(4deg);
+        }
+        .why-icon-box svg {
+            width: 30px;
+            height: 30px;
+            fill: #ffffff;
+        }
+        .why-card h3 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .why-card p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.85;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SLIDE 20: END & INTERACTIVE SOCIAL/PHONE LINKS
            ═══════════════════════════════════════════════════ */
         .s-end {
             background: radial-gradient(circle at center, #151922 0%, #06070a 65%, #000000 100%);
@@ -1102,8 +1245,6 @@
             color: #ffffff;
             letter-spacing: 0.5px;
         }
-
-
 
         /* ═══════════════════════════════════════════════════
            NAVIGATION ARROWS (Aligned to Arabic RTL)
@@ -1220,8 +1361,6 @@
             box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
         }
 
-
-
         /* ═══════════════════════════════════════════════════
            FULLSCREEN IMAGE LIGHTBOX
            ═══════════════════════════════════════════════════ */
@@ -1298,6 +1437,11 @@
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.15);
         }
+
+        /* إخفاء تسميات النقاط السفلية */
+.dock-dot .dot-tooltip {
+    display: none !important;
+}
     </style>
 </head>
 <body>
@@ -1316,12 +1460,10 @@
 <!-- ════════ PRESENTATION ════════ -->
 <div id="presentation">
 
-
     <!-- Navigation Arrows Aligned to RTL:
          - Left Arrow (left: 24px) = Next (التالي ←)
          - Right Arrow (right: 24px) = Prev (السابق →)
     -->
-
     <div class="nav-arrow next" id="btnNext" title="التالي (←)">
         <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
     </div>
@@ -1330,13 +1472,10 @@
     </div>
 
     <!-- Quick Navigation Dock -->
-    <div id="nav-dock"></div>
+    <!-- <div id="nav-dock"></div> -->
 
     <!-- HUD Timeline Scrubber -->
     <div id="hud-progress-wrap" title="انقر للتنقل"><div id="hud-progress"></div></div>
-
-
-
 
     <!-- ═══════════════════════════════════════════════════
          SLIDE 1: INTRO
@@ -1348,6 +1487,7 @@
                 <div class="intro-orbit o1"></div>
                 <div class="intro-orbit o2"></div>
                 <img src="images/logo-white.png" alt="Zidan Developments" class="intro-logo-img">
+                <div class="intro-name-ar">زيدان للتطوير العقاري</div>
             </div>
         </div>
     </div>
@@ -1440,7 +1580,7 @@
                         وسّعت زيدان نطاق عملياتها إلى قلب <strong style="color:var(--gold-light);">القاهرة الجديدة</strong>، لتثبت قدرتها على اختيار مواقع حيوية متنوعة تلبّي أرقى تطلعات السكن والاستثمار.
                     </p>
                     <div class="stat-banner d4" data-anim>
-                        <div class="stat-num-big" id="counterProjects">+٧٠</div>
+                        <div class="stat-num-big" id="counterProjects">73</div>
                         <div class="stat-desc">مشروعاً عمرانياً متميزاً<br>في أرقى وأهم المواقع</div>
                     </div>
                     <div class="regions-pills d5" data-anim>
@@ -1572,9 +1712,9 @@
                     </div>
                 </div>
                 <div class="project-image-box d3" data-anim>
-                    <div class="project-frame" data-zoom="images/building-1.jpg" data-caption="مشروع سكني فاخر — النرجس الجديدة">
+                    <div class="project-frame" data-zoom="images/building-1.jpeg" data-caption="مشروع سكني فاخر — النرجس الجديدة">
                         <div class="shine-sweep"></div>
-                        <img src="images/building-1.jpg" alt="مشروع سكني — النرجس الجديدة">
+                        <img src="images/building-1.jpeg" alt="مشروع سكني — النرجس الجديدة">
                     </div>
                 </div>
             </div>
@@ -1610,9 +1750,9 @@
                     </div>
                 </div>
                 <div class="project-image-box d3" data-anim>
-                    <div class="project-frame" data-zoom="images/building-2.jpg" data-caption="مشروع سكني راقٍ — النرجس الجديدة">
+                    <div class="project-frame" data-zoom="images/building-2.jpeg" data-caption="مشروع سكني راقٍ — النرجس الجديدة">
                         <div class="shine-sweep"></div>
-                        <img src="images/building-2.jpg" alt="مشروع سكني — النرجس الجديدة">
+                        <img src="images/building-2.jpeg" alt="مشروع سكني — النرجس الجديدة">
                     </div>
                 </div>
             </div>
@@ -1776,9 +1916,113 @@
     </div>
 
     <!-- ═══════════════════════════════════════════════════
-         SLIDE 12: END & INTERACTIVE SOCIAL/PHONE LINKS
+     SLIDE 12: WHY ZIDAN (لماذا تختار زيدان)
+     ═══════════════════════════════════════════════════ -->
+<div class="slide s-why" data-index="11" data-title="لماذا تختار زيدان">
+    <div class="slide-container">
+        <div class="why-wrap" style="display:flex;align-items:center;justify-content:center;height:100%;">
+            <h1 class="title-hero" data-anim style="font-size:72px;text-align:center;color:#ffffff;text-shadow:0 0 60px rgba(255,255,255,0.15),0 0 120px rgba(255,255,255,0.05);">
+               ليه تختار زيدان؟
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SLIDES 13–20: GALLERY (8 صور مُضافة)
+     ═══════════════════════════════════════════════════ -->
+<div class="slide s-gallery" data-index="12" data-title="معرض الصور 1">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p1.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p1.jpeg" alt="معرض الصور 1">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide s-gallery" data-index="13" data-title="معرض الصور 2">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p2.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p2.jpeg" alt="معرض الصور 2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide s-gallery" data-index="14" data-title="معرض الصور 3">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p3.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p3.jpeg" alt="معرض الصور 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide s-gallery" data-index="15" data-title="معرض الصور 4">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p4.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p4.jpeg" alt="معرض الصور 4">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide s-gallery" data-index="16" data-title="معرض الصور 5">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p5.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p5.jpeg" alt="معرض الصور 5">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide s-gallery" data-index="17" data-title="معرض الصور 6">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p6.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p6.jpeg" alt="معرض الصور 6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide s-gallery" data-index="18" data-title="معرض الصور 7">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p7.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p7.jpeg" alt="معرض الصور 7">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide s-gallery" data-index="19" data-title="معرض الصور 8">
+    <div class="slide-container">
+        <div class="gallery-wrap">
+            <div class="gallery-frame" data-zoom="images/p8.jpeg" data-caption="">
+                <div class="shine-sweep"></div>
+                <img src="images/p8.jpeg" alt="معرض الصور 8">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ═══════════════════════════════════════════════════
+         SLIDE 21: END & INTERACTIVE SOCIAL/PHONE LINKS
          ═══════════════════════════════════════════════════ -->
-    <div class="slide s-end" data-index="11" data-title="تواصل معنا">
+    <div class="slide s-end" data-index="20" data-title="تواصل معنا">
         <div class="slide-container">
             <div class="end-wrap">
                 <img src="images/logo-white.png" alt="Zidan Developments" class="end-logo-img d1" data-anim>
@@ -1798,11 +2042,15 @@
                         <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         <span>Zidan Developments</span>
                     </a>
+                    <!-- Instagram Link -->
+                    <a href="https://www.instagram.com/zidan_developments?igsi=MTI2N2ZuZjFxejJzZA==" target="_blank" rel="noopener noreferrer" class="contact-pill" title="تابعنا على انستجرام">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.264-.07-1.643-.07-4.848 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <span>Zidan Developments</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-
 </div><!-- /#presentation -->
 
 <!-- Fullscreen Image Lightbox Modal -->
@@ -1840,7 +2088,6 @@
     let current = 0;
     let isLocked = false;
     const DURATION = 700;
-
 
     // ── Particle Canvas Engine ──
     (function(){
@@ -1913,7 +2160,7 @@
     animateMouseGlow();
 
     // ── 3D Card Parallax Tilt ──
-    const tiltCards = document.querySelectorAll('.portfolio-card-7, .mall-card, .vision-card, .project-info-card');
+    const tiltCards = document.querySelectorAll('.portfolio-card-7, .mall-card, .vision-card, .project-info-card, .why-card');
     tiltCards.forEach(function(card){
         card.addEventListener('mousemove', function(e){
             const rect = card.getBoundingClientRect();
@@ -1993,35 +2240,10 @@
         progWrap.addEventListener('click', function(e){
             e.stopPropagation();
             const rect = progWrap.getBoundingClientRect();
-            // In RTL, 0% starts from right or left depending on direction
             const ratio = (e.clientX - rect.left) / rect.width;
             const targetIdx = Math.floor(ratio * TOTAL);
             goToSlide(Math.max(0, Math.min(TOTAL - 1, targetIdx)));
         });
-    }
-
-    // ── Animated Counter for Slide 4 ──
-    function triggerStatCounter(){
-        const counterEl = document.getElementById('counterProjects');
-        if(!counterEl) return;
-        const target = 70;
-        const duration = 1200;
-        const start = performance.now();
-
-        function step(now){
-            const progress = Math.min((now - start) / duration, 1);
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            const val = Math.floor(easeOut * target);
-            
-            const arabicDigits = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
-            const arabicStr = String(val).split('').map(d => arabicDigits[d] || d).join('');
-            counterEl.textContent = '+' + arabicStr;
-
-            if(progress < 1){
-                requestAnimationFrame(step);
-            }
-        }
-        requestAnimationFrame(step);
     }
 
     // ── Preloader Dismiss ──
@@ -2054,10 +2276,6 @@
 
         current = targetIdx;
         updateHUD();
-
-        if(current === 3){
-            setTimeout(triggerStatCounter, 200);
-        }
 
         setTimeout(function(){
             prevSlide.classList.remove('exiting');
@@ -2105,7 +2323,7 @@
 
     // ── Mouse Click (excluding interactive buttons) ──
     document.addEventListener('click', function(e){
-        if(e.target.closest('a, button, input, textarea, select, .nav-arrow, .dock-dot, #nav-dock, .project-frame, .map-display-frame, .founder-photo-frame, #image-lightbox')) return;
+        if(e.target.closest('a, button, input, textarea, select, .nav-arrow, .dock-dot, #nav-dock, .project-frame, .map-display-frame, .founder-photo-frame, .gallery-frame, #image-lightbox')) return;
         nextSlide();
     });
 
@@ -2141,6 +2359,70 @@
             else prevSlide();          // Swipe right -> Prev in RTL
         }
     }, { passive: true });
+
+})();
+
+(function() {
+    'use strict';
+
+  // ── عداد المشاريع (من 0 إلى 73) - يعمل كل مرة تظهر فيها الشريحة ──
+function animateCounter() {
+    const counterElement = document.getElementById('counterProjects');
+    if (!counterElement) return;
+    
+    // إعادة تعيين الرقم إلى 0 قبل البدء
+    counterElement.textContent = '0';
+    
+    const targetNumber = 73;
+    const duration = 2000; // 2 ثانية
+    const startTime = Date.now();
+    
+    function updateCounter() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // دالة easing للتسريع في البداية والتباطؤ في النهاية
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const currentNumber = Math.floor(easeOutQuart * targetNumber);
+        
+        counterElement.textContent = currentNumber;
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+        } else {
+            counterElement.textContent = targetNumber;
+        }
+    }
+    
+    updateCounter();
+}
+
+// ── مراقبة التغييرات على الشرائح وتشغيل العداد كل مرة تظهر فيها الشريحة ──
+function checkAndRunCounter() {
+    const slide = document.querySelector('.slide.s-cairo');
+    if (slide && slide.classList.contains('active')) {
+        animateCounter();
+        return true;
+    }
+    return false;
+}
+
+// تشغيل فوري إذا كانت الشريحة نشطة
+checkAndRunCounter();
+
+// مراقبة التغييرات على الشرائح
+const observer = new MutationObserver(function() {
+    checkAndRunCounter();
+});
+
+const presentation = document.getElementById('presentation');
+if (presentation) {
+    observer.observe(presentation, {
+        attributes: true,
+        attributeFilter: ['class'],
+        subtree: true
+    });
+}
 
 })();
 </script>
