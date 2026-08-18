@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zidan Developments</title>
+    <title>Zidan Developments — عرض تقديمي</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
@@ -333,7 +333,7 @@
         }
 
         /* ══════════════════════════════════════════════════════
-           SLIDE 2: FOUNDER (م. رفعت زيدان)
+           SLIDE 2: FOUNDER (م. رفعت زيدان - بدون مقولة)
            ══════════════════════════════════════════════════════ */
         .s-founder {
             background: linear-gradient(135deg, #f9f7f2 0%, #ebe5d6 100%);
@@ -354,26 +354,12 @@
             display: inline-block;
         }
         .founder-photo-frame img {
-            max-height: 460px;
+            max-height: 480px;
             width: auto;
             max-width: 100%;
             object-fit: contain;
             border-radius: var(--radius-md);
             display: block;
-        }
-        .quote-card {
-            margin-top: 24px;
-            padding: 18px 22px;
-            background: #ffffff;
-            border-right: 4px solid var(--gold);
-            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-        }
-        .quote-card p {
-            font-size: 16px;
-            color: var(--text-sub);
-            line-height: 1.8;
-            font-style: italic;
         }
 
         /* ══════════════════════════════════════════════════════
@@ -712,7 +698,81 @@
         }
 
         /* ══════════════════════════════════════════════════════
-           SLIDE 10: FUTURE VISION
+           SLIDE 10: COMMERCIAL MALLS (NAMES ONLY)
+           Invest Mall بالتجمع & مول في الأندلس
+           ══════════════════════════════════════════════════════ */
+        .s-malls {
+            background: radial-gradient(circle at center, var(--navy-mid) 0%, var(--navy-deep) 80%);
+        }
+        .malls-wrap {
+            max-width: 1050px;
+            width: 100%;
+            text-align: center;
+        }
+        .malls-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            margin-top: 44px;
+        }
+        .mall-card {
+            background: rgba(19, 36, 60, 0.75);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-xl);
+            padding: 54px 36px;
+            text-align: center;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mall-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.8;
+        }
+        .mall-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            background: rgba(25, 48, 80, 0.95);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(200, 165, 82, 0.15);
+        }
+        .mall-icon-box {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, rgba(200, 165, 82, 0.2), rgba(200, 165, 82, 0.05));
+            border: 1px solid rgba(200, 165, 82, 0.35);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .mall-icon-box svg {
+            width: 34px;
+            height: 34px;
+            fill: var(--gold-light);
+        }
+        .mall-card h3 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .mall-card p {
+            font-family: 'Cairo', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gold-light);
+        }
+
+        /* ══════════════════════════════════════════════════════
+           SLIDE 11: FUTURE VISION
            ══════════════════════════════════════════════════════ */
         .s-vision {
             background: radial-gradient(circle at center, #112542 0%, var(--navy-deep) 75%);
@@ -785,7 +845,7 @@
         }
 
         /* ══════════════════════════════════════════════════════
-           SLIDE 11: END & INTERACTIVE SOCIAL LINK
+           SLIDE 12: END & INTERACTIVE SOCIAL/PHONE LINKS
            ══════════════════════════════════════════════════════ */
         .s-end {
             background: radial-gradient(circle at center, #0e1d33 0%, var(--navy-deep) 75%);
@@ -892,7 +952,7 @@
     <!-- HUD -->
     <div id="hud-progress"></div>
     <div id="hud-counter">
-        <span class="current-num">01</span> / <span id="hud-total">11</span>
+        <span class="current-num">01</span> / <span id="hud-total">12</span>
     </div>
 
     <!-- ═══════════════════════════════════════════════════
@@ -906,13 +966,13 @@
                 <div class="intro-orbit o1"></div>
                 <div class="intro-orbit o2"></div>
                 <img src="images/logo-white.png" alt="Zidan Developments" class="intro-logo-img">
-                <!-- <div class="intro-tagline">DEVELOPMENTS & REAL ESTATE INVESTMENT</div> -->
+                <div class="intro-tagline">DEVELOPMENTS & REAL ESTATE INVESTMENT</div>
             </div>
         </div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════
-         SLIDE 2: FOUNDER (م. رفعت زيدان)
+         SLIDE 2: FOUNDER (م. رفعت زيدان - بدون المقولة)
          ═══════════════════════════════════════════════════ -->
     <div class="slide s-founder" data-index="1">
         <div class="slide-container">
@@ -926,11 +986,8 @@
                     </h2>
                     <div class="gold-line d3" data-anim></div>
                     <p class="desc-text on-light d3" data-anim>
-                        رئيس مجلس ادارة  <strong style="color:var(--text-dark);font-weight:700;">الشركة</strong> المهندس <strong style="color:var(--text-dark);font-weight:700;">رفعت زيدان</strong>، مهندس مدني ذو خبرة ميدانية عميقة، يقود توجّه الشركة نحو تطوير مشروعات تجمع بين جودة التنفيذ وقوة الموقع.
+                        على رأس <strong style="color:var(--text-dark);font-weight:700;">زيدان للتطوير العقاري</strong> يقف المهندس <strong style="color:var(--text-dark);font-weight:700;">رفعت زيدان</strong>، مهندس مدني ذو خبرة ميدانية عميقة، يقود توجّه الشركة نحو تطوير مشروعات تجمع بين جودة التنفيذ وقوة الموقع.
                     </p>
-                    <div class="quote-card d4" data-anim>
-                        <!-- <p>«فلسفة القيادة تقوم على الدقة الهندسية، والانتقاء الواعي للمواقع، والالتزام بتقديم قيمة حقيقية تدوم لكل مستثمر وعميل.»</p> -->
-                    </div>
                 </div>
                 <div style="text-align:center;" class="d3" data-anim>
                     <div class="founder-photo-frame">
@@ -966,12 +1023,12 @@
                     <div class="milestone-item d5" data-anim>
                         <div class="milestone-badge">٢</div>
                         <h4>ثقة العلامات الكبرى</h4>
-                        <p>رنين وبنك مصر يختاران زيدان </p>
+                        <p>رنين وبنك مصر يختاران زيدان لتنفيذ مقراتهما ومشروعاتهما</p>
                     </div>
                     <div class="milestone-item d6" data-anim>
                         <div class="milestone-badge">٣</div>
                         <h4>التوسع إلى العبور</h4>
-                        <p>مشروعات عمارات سكنية في الحي الرابع والحي التاسع</p>
+                        <p>مشروعات سكنية راسخة في الحي الرابع والحي التاسع</p>
                     </div>
                 </div>
                 <div class="trust-brands-bar d7" data-anim>
@@ -1013,7 +1070,7 @@
                         <span class="region-tag">النرجس الجديدة</span>
                         <span class="region-tag">الحي التكميلي</span>
                         <span class="region-tag">بيت الوطن</span>
-                        <!-- <span class="region-tag">جنوب السويس</span> -->
+                        <span class="region-tag">جنوب السويس</span>
                     </div>
                 </div>
                 <div class="map-display-frame d4" data-anim>
@@ -1244,16 +1301,52 @@
     </div>
 
     <!-- ═══════════════════════════════════════════════════
-         SLIDE 10: FUTURE VISION
+         SLIDE 10: COMMERCIAL MALLS (NAMES ONLY)
+         "Invest Mall" في التجمع & "مول في الأندلس"
          ═══════════════════════════════════════════════════ -->
-    <div class="slide s-vision" data-index="9">
+    <div class="slide s-malls" data-index="9">
+        <div class="slide-container">
+            <div class="malls-wrap">
+                <div class="pill-badge d1" data-anim>
+                    <span class="dot"></span> القطاع التجاري
+                </div>
+                <h2 class="title-section d2" data-anim>
+                    مشروعات تجارية اخرى
+                </h2>
+                <div class="gold-line center d3" data-anim></div>
+                <div class="malls-grid-2">
+                    <!-- Invest Mall -->
+                    <div class="mall-card d4" data-anim>
+                        <div class="mall-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                        </div>
+                        <h3>Invest Mall</h3>
+                        <p>في التجمع</p>
+                    </div>
+                    <!-- مول في الأندلس -->
+                    <div class="mall-card d5" data-anim>
+                        <div class="mall-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                        </div>
+                        <h3>مول في الأندلس</h3>
+                        <p>القطاع التجاري</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         SLIDE 11: FUTURE VISION
+         ═══════════════════════════════════════════════════ -->
+    <div class="slide s-vision" data-index="10">
         <div class="slide-container">
             <div class="vision-wrap">
                 <div class="pill-badge d1" data-anim>
                     <span class="dot"></span> الرؤية المستقبلية
                 </div>
                 <h2 class="title-section d2" data-anim>
-                    التوجهات القادمة:<br><span style="color:var(--gold-light);">كمبوندات في أهم مواقع التوسع العمراني</span>
+                    الخطوة القادمة:<br><span style="color:var(--gold-light);">كمبوندات في أهم مواقع التوسع العمراني</span>
                 </h2>
                 <div class="gold-line center d3" data-anim></div>
                 <div class="vision-grid">
@@ -1280,22 +1373,22 @@
                     </div>
                 </div>
                 <div class="vision-quote-banner d7" data-anim>
-                    <p>«زيدان للتطوير العقاري: تحدي يصنع انجاز.»</p>
+                    <p>«زيدان للتطوير العقاري: خبرة بدأت من مشروع، ونمو يتسع مع كل موقع جديد.»</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════
-         SLIDE 11: END & INTERACTIVE SOCIAL/PHONE LINKS
+         SLIDE 12: END & INTERACTIVE SOCIAL/PHONE LINKS
          ═══════════════════════════════════════════════════ -->
-    <div class="slide s-end" data-index="10">
+    <div class="slide s-end" data-index="11">
         <div class="slide-container">
             <div class="end-wrap">
                 <img src="images/logo-white.png" alt="Zidan Developments" class="end-logo-img d1" data-anim>
                 <h2 class="title-section d2" data-anim style="font-size:46px;">شكراً لثقتكم واهتمامكم</h2>
                 <p class="desc-text d3" data-anim style="color:var(--gold-light);margin-top:8px;">
-                    تطور يحكيه الواقع
+                    نبني قيمة عقارية مستدامة تمتد من قليوب إلى القاهرة الجديدة والعبور
                 </p>
                 <div class="gold-line center d4" data-anim></div>
                 <div class="contact-pills-bar d5" data-anim>
